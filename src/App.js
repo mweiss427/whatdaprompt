@@ -53,7 +53,7 @@ function App() {
             </button>
             {showPrompt && <p className="prompt">{prompt}</p>}
           </div>
-          <GuessingGame />
+          <GuessingGame generatedPrompt={prompt} />
         </div>
       )}
     </div>

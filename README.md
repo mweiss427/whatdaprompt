@@ -8,23 +8,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.
 You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
@@ -39,32 +39,39 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## How to Play "Guess the Prompt"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Overview
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+"Guess the Prompt" is a fun and engaging guessing game where one player, the Prompter, comes up with a secret prompt, and the other players, the Guessers, attempt to guess the prompt based on an AI-generated image.
 
-### Code Splitting
+### Instructions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Step 1: The Prompter creates a prompt
 
-### Analyzing the Bundle Size
+- The Prompter enters a prompt in the "Prompt" input field. A prompt can be a simple word, a phrase, or a short sentence.
+- Click the "Generate Image" button to create an AI-generated image based on the prompt.
+- The generated image will appear on the screen.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+#### Step 2: The Guessers make their guesses
 
-### Making a Progressive Web App
+- The Guessers will take turns to enter their guesses in the "Guess" input field.
+- Click the "Submit Guess" button to submit each guess.
+- The app will calculate a score between 1 and 5000, indicating how close the guess is to the actual prompt. The higher the score, the closer the guess.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Step 3: Continue guessing
 
-### Advanced Configuration
+- The Guessers will continue to make guesses, trying to get the highest score possible.
+- If needed, the Prompter can choose to show or hide the prompt by clicking the "Show Prompt" or "Hide Prompt" button.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### Step 4: Game over
 
-### Deployment
+- The game is over when the Guessers feel they have made their best guesses or when the Prompter decides to end the game.
+- The player with the highest score wins!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Tips
 
-### `npm run build` fails to minify
+- The Prompter can choose creative and unusual prompts to challenge the Guessers.
+- The Guessers should think outside the box and consider various interpretations of the generated image.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Have fun playing "Guess the Prompt"!

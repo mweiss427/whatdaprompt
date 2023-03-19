@@ -1,6 +1,7 @@
 const fetch = require("node-fetch");
 const express = require("express");
 const cors = require("cors");
+const stringSimilarity = require("string-similarity");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -42,6 +43,21 @@ app.post("/api/generate-image", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch image" });
   }
 });
+
+app.post("/api/calculate-score", (req, res) => {
+  try {
+    const { prompt, guess } = req.body;
+
+    // Calculate the similarity score between the prompt and the guess using the string-similarity package
+    const score = Math.round(stringSimilarity.compareTwoStrings(prompt, guess) * 5000);
+
+    res.json({ score });
+  } catch (error) {
+    console.error("Error occurred during the request:", error);
+    res.status(500).json({ error: "Failed to calculate score", message: error.message });
+  }
+});
+
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
