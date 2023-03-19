@@ -5,7 +5,7 @@ const stringSimilarity = require("string-similarity");
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const API_KEY = "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";
+const API_KEY = <TODO INSERT API KEY HERE>
 
 app.use(cors());
 app.use(express.json());
