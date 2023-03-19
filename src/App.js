@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
+import GuessingGame from "./component/GuessingGame";
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -44,12 +45,15 @@ function App() {
       </form>
 
       {imageData && (
-        <div className="image-container">
-          <img src={imageData} alt="Generated Image" className="image" />
-          <button className="show-prompt" onClick={() => setShowPrompt(!showPrompt)}>
-            {showPrompt ? "Hide Prompt" : "Show Prompt"}
-          </button>
-          {showPrompt && <p className="prompt">{prompt}</p>}
+        <div>
+          <div className="image-container">
+            <img src={imageData} alt="Generated Image" className="image" />
+            <button className="show-prompt" onClick={() => setShowPrompt(!showPrompt)}>
+              {showPrompt ? "Hide Prompt" : "Show Prompt"}
+            </button>
+            {showPrompt && <p className="prompt">{prompt}</p>}
+          </div>
+          <GuessingGame />
         </div>
       )}
     </div>
