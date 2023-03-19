@@ -2,6 +2,13 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## How to install and run
+
+* Verify npm is installed `npm --version`
+* run `npm install`
+* add your api key to ./server.js
+* run `npm run dev`
+
 ## Available Scripts
 
 In the project directory, you can run:
