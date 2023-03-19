@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import "./App.css";
 import GuessingGame from "./component/GuessingGame";
+import Rules from "./component/Rules";
 
 function App() {
   const [prompt, setPrompt] = useState("");
   const [imageData, setImageData] = useState(null);
   const [showPrompt, setShowPrompt] = useState(false);
+  const [showRules, setShowRules] = useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -31,6 +33,12 @@ function App() {
       <header className="App-header">
         <h1>Guess the Prompt</h1>
       </header>
+      {/* Add a "Show Rules" button */}
+      <button className="show-rules" onClick={() => setShowRules(true)}>
+        Show Rules
+      </button>
+      {/* Show the Rules component as a modal if showRules is true */}
+      {showRules && <Rules onClose={() => setShowRules(false)} />}
       <form onSubmit={handleSubmit}>
         <label>
           Prompt:
