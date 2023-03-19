@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css"
 
 function App() {
   const [prompt, setPrompt] = useState("");
@@ -25,6 +26,9 @@ function App() {
 
   return (
     <div className="App">
+      <header>
+        <h1>Guess the Prompt</h1>
+      </header>
       <form onSubmit={handleSubmit}>
         <label>
           Prompt:
@@ -37,7 +41,11 @@ function App() {
         <button type="submit">Generate Image</button>
       </form>
 
-      {imageData && <img src={imageData} alt="Generated Image" />}
+      {imageData && (
+        <div className="image-container">
+          <img src={imageData} alt="Generated Image" />
+        </div>
+      )}
     </div>
   );
 }
